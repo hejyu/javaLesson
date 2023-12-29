@@ -68,6 +68,7 @@
 * 커밋 히스토리를 확인합니다
 
     $ git log
+    
     ![Alt text](image-3.png)
 
 
