@@ -74,24 +74,34 @@
 
 
 ### <u>집에서 원격 저장소에 연결하는 법</u>
+
 #### 1) git clone 원격 저장소의 주소
 #### 2) git config --global user.email
 #### 3) git config --global user.name
 #### 4) clone 한 프로젝트 vs code 에서 열기
 
 ### <u>원격 저장소 집에서 관리하기</u>
+
 #### 1) vscode 형상관리 메뉴에서 소스 내려받기 pull (동기화)
 #### 2) 수정한 소스 원격 저장소에 올리기 stage - commit - push 
 
 
 ### 업데이트된 원격 저장소, 로컬 저장소에서 업데이트하기
+
 #### 1) 최신 원격 저장소 내용 가져오기
+
     $git fectch 원격-저장소-이름 가져오고자-하는-브랜치이름 
+
     예) $git fetch orgin main
+
 #### 2) 모든 브랜지 목록 확인
+
    $git branch -a
    
    ![Alt text](image-4.png)
+
 #### 3) 로컬 저장소 업데이트
+
     $git merge 가져오고자-하는-브랜치-이름
+
     예)git merge origin/main
