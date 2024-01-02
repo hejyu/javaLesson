@@ -90,6 +90,7 @@
     예) $git fetch orgin main
 #### 2) 모든 브랜지 목록 확인
    $git branch -a
+   
    ![Alt text](image-4.png)
 #### 3) 로컬 저장소 업데이트
     $git merge 가져오고자-하는-브랜치-이름
