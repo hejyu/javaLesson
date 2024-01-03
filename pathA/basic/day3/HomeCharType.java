@@ -24,21 +24,40 @@ public class HomeCharType {
 
         // 문자열을 저장할 변수 message 선언
         // 문자열 분석에 사용할 변수를 작성
-        // 대문자 구분 조건식을 작성
-        // 소문자 구분 조건식을 작성
-        // 숫자 구분 조건식을 작성
-        // 기호 구분 조건식을 작성 
-        
-        String message = "A Z a z 0 9 ";
-        int upperCount, slowerCount, numberCount, symbolCount;
+        // 대문자 구분 조건식을 작성, 65 ~ 90
+        // 소문자 구분 조건식을 작성, 97 ~ 122
+        // 숫자 구분 조건식을 작성, 48 ~ 57
+        // 기호 구분 조건식을 작성,  나머지 
+        // 문자열이 가리키는 인덱스를 이용해 아 반환
+        String message = "Ho*''Hi*9";
+        int upperCount=0;
+        int lowerCount=0;
+        int numberCount=0;
+        int symbolCount= 0;
         int i = 0;
-        
+        int check = 0;
         while(i < message.length()){
-            System.out.print( String.format("%s / %d\t", (char)message.charAt(i), (int)message.charAt(i)) );
-            i = i+1;
+            char val = message.charAt(i);
+            int code = message.codePointAt(i);
+            if((int)'A' <= code && (int)'Z' >= code ) {
+                upperCount++;
+            }else if((int)'a' <= code && (int)'z' >= code) {
+                lowerCount++;
+            }else if((int)'0' <= code && (int)'9' >= code) {
+                numberCount++;
+            }else {
+                symbolCount++;
+            }
+
+            i++;
         }
 
-        System.out.println(message);
+        check = upperCount + lowerCount + numberCount + symbolCount;
+
+        if(message.length() == check){
+            System.out.println(String.format("문자열 : %s", message));
+            System.out.println(String.format("문자 종류 : 대문자 %d개, 소문자 %d개, 숫자 %d개, 기호 %d개  ", upperCount, lowerCount, numberCount, symbolCount));
+        }
 
 
     }
