@@ -37,7 +37,6 @@ public class HomeCharType {
         int i = 0;
         int check = 0;
         while(i < message.length()){
-            char val = message.charAt(i);
             int code = message.codePointAt(i);
             if((int)'A' <= code && (int)'Z' >= code ) {
                 upperCount++;
