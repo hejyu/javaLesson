@@ -40,7 +40,7 @@ public class Score {
         int sum =0;
     
         for(int i=0; i<jumsues.length; i++){
-           sum += jumsues[i];
+            sum += jumsues[i];
         }
         return sum;
     }
@@ -49,7 +49,7 @@ public class Score {
     public double average(){
         int avg =0;
         for(int i=0; i<jumsues.length; i++){
-           avg = sum()/jumsues.length;
+            avg = sum()/jumsues.length;
         }
         return avg;
     }
