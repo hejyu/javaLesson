@@ -1,6 +1,5 @@
 package object.day6;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class AddQuizMain {
@@ -34,11 +33,11 @@ public class AddQuizMain {
         int[] answerArr = new int[m_count];         //문제 정답 배열 생성
         char[] markArr   = new char[m_count];       //채점 배열 생성
         int rightCount = 0;                         //맞은 개수
+        
 
-    
-        
         System.out.println(String.format("덧셈. %2d개 문제 퀴즈 시작", m_count));
-        
+        AddQuiz[] quizs = new AddQuiz[m_count];     // 클래스 배열 
+
         try {
             while (i < m_count) {
                 str = "";
@@ -67,9 +66,8 @@ public class AddQuizMain {
                 int userAnswer = sc.nextInt();           // 학생의 답 입력받기  
                 userArr[i] = userAnswer;
                 
-
-                AddQuiz quiz = new AddQuiz(num1, num2, userAnswer);     // 커스텀 생성자 사용
-                boolean bol = quiz.isRight(answer);
+                quizs[i] = new AddQuiz(num1, num2, userAnswer);     // 커스텀 생성자 사용
+                boolean bol = quizs[i].isRight(answer);
 
                 if(bol)  markArr[i] = 'O';
                 else     markArr[i] = 'X';
